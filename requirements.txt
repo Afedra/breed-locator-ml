@@ -1,0 +1,16 @@
+# for scraping akc.org for a list of breed names and pics
+scrapy
+# for calculating Haralick textures
+mahotas
+# image operations convenience functions
+imutils
+# plotting package
+seaborn
+# data operations
+pandas
+# machine learning lib
+scikit-learn
+# image processing
+scikit-image
+# eta and % completion of tasks
+progressbar
