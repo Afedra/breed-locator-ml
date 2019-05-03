@@ -414,7 +414,7 @@ for i in range(startIm, bb.shape[0]):
 pbar.finish()
 
 ###########################################################################################################################################
-extracts 13-dim Haralick texture and color histogram from fore- and background of images -- WARNING: this script takes hours to complete
+# extracts 13-dim Haralick texture and color histogram from fore- and background of images -- WARNING: this script takes hours to complete
 ###########################################################################################################################################
 plt.style.use('seaborn-dark')
 

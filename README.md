@@ -42,7 +42,7 @@ I have provided the install_cv2.sh file, which can be run in a Linux environent 
 ##### Preparing Images
 * enables drawing rectangles around breeds in images -- WARNING: this task takes a long time to complete
 * removes bounding boxes from accidental clicks
-* uses OpenCV grabCut() to segment dog from background -- WARNING: this script takes hours to complete
+* uses OpenCV grabCut() to segment breed from background -- WARNING: this script takes hours to complete
 
 ##### Extracting Features
 * extract 13-dim Haralick texture and color histogram from fore- and background of images -- WARNING: this script takes hours to complete
@@ -57,9 +57,9 @@ The script will start logging the rectangles you draw as bounding boxes for bree
 -right arrow = next available pic
 -left arrow = previous available pic
 -'n' = random pic
--'d' = next dog breed
--'b' = log coords of drawn rectangle around dog bodies
--'f' = log coords of drawn rectangle around dog faces
+-'d' = next breed breed
+-'b' = log coords of drawn rectangle around breed bodies
+-'f' = log coords of drawn rectangle around breed faces
 -'r' = reset all bounding boxes
 -'q' = quit program
 
@@ -69,7 +69,7 @@ Finally, get rid of any tiny bounding boxes you may have accidentally created.  
 
 You can check the bounding boxes by running the file 'process_ims/check_bounding_boxes.py', which will draw the bounding boxes for bodies on the images, and then bounding boxes for heads, and can be advanced to the next image by pressing any key.
 
-#### Grabcut dog foregrounds
+#### Grabcut breed foregrounds
 The next step was to use the grabCut() function from OpenCV to remove the backgrounds from the images. Warning: this took about 3 hours on my machine.
 
 #### Extract Haralick textures and color histograms
@@ -86,12 +86,12 @@ Extract the 13-dimension Haralick features and color histograms of the foregroun
 
 ### Machine learning
 #### Overview
-* machine_learning.py -- goes through machine learning algos and analysis
-* check_robust.py -- checks performance on unseen data
-* check_peturb.py -- checks reaction of model to noise in training and test data
+* Go through machine learning algos and analysis
+* Check performance on unseen data
+* Check reaction of model to noise in training and test data
 
 #### Train and test the classifiers
-Run 'process_ims/machine_learning.py' to see the performance of machine learning classifiers on the training data using different kinds of features.
+Performance of machine learning classifiers on the training data using different kinds of features.
 
 #### Check robustness of model
-Run 'process_ims/check_robust.py' and 'process_ims/check_peturb.py' to check the model's performance on unseen data and it's sensitivity to noise.
+Check the model's performance on unseen data and it's sensitivity to noise.
